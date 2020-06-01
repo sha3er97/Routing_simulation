@@ -18,13 +18,9 @@ The output will be in file called "Nets.txt" and the output contains pairs of li
 
 ## Team members
 [Ayman Azzam](https://github.com/AymanAzzam)        
-Sec: 1         B.N: 12
 
 [Mostafa Waleed](https://github.com/sha3er97)       
-Sec: 2,         B.N: 24
 
 [Menna Fekry](https://github.com/MennaFekry)        
-Sec: 2,         B.N: 25
 
 [Reham Ali](https://github.com/rehamaali)           
-Sec: 1,         B.N: 22
