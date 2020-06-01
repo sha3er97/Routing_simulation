@@ -38,6 +38,6 @@ def generate_Nets(chipx,chipy,regionx,regiony):
     f.close()
     
     
-generate_Nets(5000,4000,50,40)
+generate_Nets(100,100,5,5)
     
 #no = (j/regionSizey)*(chipSizex/regionSizex)+(i/regionSizex)
