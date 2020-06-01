@@ -17,10 +17,14 @@ The output will be in file called "Nets.txt" and the output contains pairs of li
 2. Run the java project with IDE(eclipse, IntelliJ, ...) and get the output (running time).
 
 ## Team members
-[Ayman Azzam](https://github.com/AymanAzzam)        Sec: 1         B.N: 12
+[Ayman Azzam](https://github.com/AymanAzzam)        
+Sec: 1         B.N: 12
 
-[Mostafa Waleed](https://github.com/sha3er97)   Sec: 2         B.N: 24
+[Mostafa Waleed](https://github.com/sha3er97)       
+Sec: 2         B.N: 24
 
-[Menna Fekry](https://github.com/MennaFekry)        Sec: 2         B.N: 25
+[Menna Fekry](https://github.com/MennaFekry)        
+Sec: 2         B.N: 25
 
-[Reham Ali](https://github.com/rehamaali)           Sec: 1         B.N: 22
+[Reham Ali](https://github.com/rehamaali)           
+Sec: 1         B.N: 22
