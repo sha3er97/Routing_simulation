@@ -17,7 +17,7 @@ public class MainClass {
         for (int i = 0; i < regionsNum; i++) {
             globalRegions[i] = new HashSet<>();
         }
-        //int netsCount = 10000; //10k
+        int netsCount =0 ;
         //Net[] nets = new Net[netsCount];
         try {
             File myObj = new File("nets.txt");
@@ -35,6 +35,7 @@ public class MainClass {
                     globalRegions[i].add(net);
                 }
                 //nets[Netiterator] =net;
+                netsCount++;
                 Netiterator++;
             }
             myReader.close();
@@ -49,7 +50,7 @@ public class MainClass {
 
         long startTime = System.currentTimeMillis();
         /***********************************all sequential****************************************************************/
-
+/*
         //DONE :: connect unfinished nets sequentially
         for (int i = 0; i < regionsNum; i++) {
             for (Net net : globalRegions[i]) {
@@ -61,9 +62,9 @@ public class MainClass {
         //DONE :: end timer
         long endTime3 = System.currentTimeMillis();
         System.out.println("all-sequential method (milli seconds): " + (endTime3 - startTime));
-
+*/
         /*****************************************for method 2,3*********************************************************/
-/*
+
         int iterator = 0;
         int iThreads = 0;
         int jThreads = 0;
@@ -79,9 +80,9 @@ public class MainClass {
         for (int i = 0; i < regionsNum; i++)
             Threads[i].join();
 
-*/
+
         /*******************************************paper simulation********************************************************/
-/*
+
         //DONE :: connect unfinished nets sequentially
         System.out.println("routed: " + routed);
         for (int i = 0; i < regionsNum; i++) {
@@ -91,13 +92,14 @@ public class MainClass {
                 }
             }
         }
+        System.out.println("routed: " + routed);
         //DONE :: end timer
         long endTime = System.currentTimeMillis();
         System.out.println("old method (milli seconds): " + (endTime - startTime));
-*/
+
         /*******************************************our modification**********************************************************/
 /*
-        for (int k = 4; k < regionsNum; k *= 4) { //k : hierarchy level =4,16,64...
+        for (int k = 4; k < regionsNum; k *= 16) { //k : hierarchy level =4,16,64...
             int iterator2 = 0;
             for (int i = 0; i <= chipSizeX - regionSizeX; ) {
                 for (int j = 0; j <= chipSizeY - regionSizeY; ) {
@@ -112,10 +114,10 @@ public class MainClass {
                         if (iterator2 + z >= regionsNum) break;
                         merged.addAll(globalRegions[iterator2 + (chipSizeX / regionSizeX) + z]);
                     }
-                    Region region = new Region(merged, i, i + regionSizeX * k, j, j + regionSizeY * k);
+                    Region region = new Region(merged, i, i + regionSizeX * k/2, j, j + regionSizeY * k/2);
                     Threads[iterator2].setMyRegion(region);
                     Threads[iterator2].start();
-                    for (int f = 0; f < k; f++) {
+                    for (int f = 0; f < k/2; f++) {
                         iterator2++;
                         i += regionSizeX;
                         j += regionSizeY;
@@ -125,6 +127,7 @@ public class MainClass {
             for (int t = 0; t < regionsNum; t += k)
                 Threads[t].join();
             System.out.println("routed at level: " + k + " = " + routed);
+            if(routed==netsCount) break;
         }
 
         //DONE :: end timer 2
