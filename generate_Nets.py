@@ -10,8 +10,8 @@ def generate_Nets(chipx,chipy,regionx,regiony):
         for j in range(0,chipy,regiony):
             #nets in the region:
             region = int(j/regiony)*int(chipx/regionx)+int(i/regionx)
-            end = random.randint(5,15)
-            for n in range (0,end):
+            #end = random.randint(5,15)
+            for n in range (0,30):
                 xstart = random.randint(i,i+regionx-2)
                 xend = random.randint(xstart+1,i+regionx)
                 ystart = random.randint(j,j+regiony-2)
@@ -21,8 +21,8 @@ def generate_Nets(chipx,chipy,regionx,regiony):
             
             #nets in & out the region::
             if i != chipx - regionx and j != chipy - regiony:
-                end = random.randint(2,5)
-                for n in range (0,end):
+                #end = random.randint(2,5)
+                for n in range (0,5):
                     xstart = random.randint(i,i+regionx-1)
                     xend = random.randint(min(i+regionx,chipx-2),chipx-1)
                     ystart = random.randint(j,j+regiony-1)
