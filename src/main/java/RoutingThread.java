@@ -14,7 +14,6 @@ public class RoutingThread extends Thread {
                         && net.getYstart() >= myRegion.getYstart() && net.getYend() <= myRegion.getYend()) {
                             //  in my region
                         MainClass.dummyRouting(net);
-                        System.out.println("Exception is caught");
                     }
                 }
             }

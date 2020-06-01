@@ -86,5 +86,6 @@ public class MainClass {
             i--;
         } //dummy function to consume time instead of complicated detailed routing
         net.setDone(true);
+        System.out.println("NET no. : "+net.getId()+" is now routed");
     }
 }

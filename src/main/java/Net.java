@@ -13,6 +13,10 @@ public class Net {
         Yend = yend;
     }
 
+    public int getId() {
+        return id;
+    }
+
     public void setDone(boolean done) {
         this.done = done;
     }
