@@ -21,10 +21,10 @@ The output will be in file called "Nets.txt" and the output contains pairs of li
 Sec: 1         B.N: 12
 
 [Mostafa Waleed](https://github.com/sha3er97)       
-Sec: 2         B.N: 24
+Sec: 2,         B.N: 24
 
 [Menna Fekry](https://github.com/MennaFekry)        
-Sec: 2         B.N: 25
+Sec: 2,         B.N: 25
 
 [Reham Ali](https://github.com/rehamaali)           
-Sec: 1         B.N: 22
+Sec: 1,         B.N: 22
